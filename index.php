@@ -91,7 +91,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 					// Spotlight & Settings
 					$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-Small@2x.png', 58, 72 );
 
-					// Spotlight & Settings (iOS7)
+					// Spotlight (iOS7)
 					$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-Small-40.png', 40, 72 );
 					$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-Small-40@2x.png', 80, 72 );
 
@@ -106,10 +106,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 						// Spotlight && Settings
 						$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-Small.png', 29, 72 );
+						
+						// Settings (iPhone 6 Plus)
+						$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-Small@3x.png', 87, 72 );
 
 						// App (iOS7)
 						$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-60.png', 60, 72 );
 						$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-60@2x.png', 120, 72 );
+						$sizes[] = array( '/project' . $assets_path . '/iphone/appicon-60@3x.png', 180, 72 );
 					}
 
 					// iPad
@@ -221,6 +225,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 					$sizes[] = array( $ios_path . '/Default.png', 320, $_POST['apple'] ? 480 : 460, 72 );
 					$sizes[] = array( $ios_path . '/Default@2x.png', 640, 960, 72 );
 					$sizes[] = array( $ios_path . '/Default-568h@2x.png', 640, 1136, 72 );
+					
+					// iPhone 6
+					$sizes[] = array( $ios_path . '/Default-667h@2x.png', 750, 1334, 72 );
+					$sizes[] = array( $ios_path . '/Default-Portrait-736@3x.png', 1242, 2208, 72 );
+					$sizes[] = array( $ios_path . '/Default-Landscape-736@3x.png', 2208, 1242, 72 );
 				}
 
 				// iPad
@@ -646,8 +655,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
         <div class="span6">
 
-        	<h4>iOS7</h4>
-        	<p>TiCons generates iOS7 icons.</p>
+        	<h4>iPhone 6(+)</h4>
+        	<p>TiCons has support for iPhone 6(+) <a href="https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" target="_blank">icons</a> and <a href="https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1" target="_blank">splashes</a>.</p>
 
         	<h4>App stores</h4>
         	<p>TiCons also generates iTunes Connect and Google Play assets for you.</p>
